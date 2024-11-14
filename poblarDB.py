@@ -5,7 +5,7 @@ bd = BD()
 
 scp = True
 ben = False
-mhs = ["AOA"]
+mhs = ["AOA", "GWO"]
 cantidad = 0
 
 DS_actions = [
@@ -59,13 +59,23 @@ if scp:
     # poblar ejecuciones SCP
     instancias = bd.obtenerInstancias(
         f"""
-                                      'scp41' """
+                                    'scp41', 'scp42', 'scp43', 'scp44', 'scp45',
+                                    'scp46', 'scp47', 'scp48', 'scp49', 'scp410',
+                                    'scp51', 'scp52', 'scp53', 'scp54', 'scp55',
+                                    'scp56', 'scp57', 'scp58', 'scp59', 'scp510',
+                                    'scp61', 'scp62', 'scp63', 'scp64', 'scp65',
+                                    'scp66', 'scp67', 'scp68', 'scp69', 'scp610',
+                                    'scpd1', 'scpd2', 'scpd3', 'scpd4', 'scpd5',
+                                    'scpnre1', 'scpnre2', 'scpnre3', 'scpnre4', 'scpnre5',
+                                    'scpnrf1', 'scpnrf2', 'scpnrf3', 'scpnrf4', 'scpnrf5',
+                                    'scpnrh1', 'scpnrh2', 'scpnrh3', 'scpnrh4', 'scpnrh5' 
+        """
     )
 
     print(instancias)
-    iteraciones = 10
-    experimentos = 1
-    poblacion = 5
+    iteraciones = 20
+    experimentos = 50
+    poblacion = 10
     for instancia in instancias:
 
         for mh in mhs:
